@@ -1,24 +1,26 @@
 #include <iostream>
 using namespace std;
+
 void selectionSort(int arr[],int n)
 {
-    int k;
-    for(int i=0;i<n;i++)
+    int temp;
+    for(int j=0;j<n;j++)
     {
-        for(int j=i+1;j<n;j++)
-        {
-        if(arr[j]<arr[i])
-        {
-            k=arr[j];
-            arr[j]=arr[i];
-            arr[i]=k;
-        }
-        }
+   for(int i=j+1;i<n;i++)
+   {
+    if(arr[i]<arr[j])
+    {
+         temp=arr[j];
+         arr[j]=arr[i];
+         arr[i]=temp;
     }
+   }
+   }
     for(int i=0;i<n;i++)
     {
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
 }
 int main() {
     int n;
